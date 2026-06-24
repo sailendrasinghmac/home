@@ -526,6 +526,8 @@
     .platforms { padding: 80px 30px; }
     .platform-item { padding: 30px 32px; }
     .social-section { padding: 80px 30px; }
+    .tour { padding: 80px 30px; }
+    .tour-coming-soon { padding: 40px 30px; }
     footer { padding: 40px 30px; flex-direction: column; align-items: flex-start; }
     .footer-copy { text-align: left; }
     .section-divider { margin: 0 30px; }
@@ -537,6 +539,105 @@
     .about-body h2 { font-size: 2.5rem; }
     .platforms-grid { gap: 0; }
     .platform-item { padding: 24px 20px; }
+  }
+
+  /* ── TOUR DATES ── */
+  .tour {
+    padding: 120px 60px;
+    background: var(--black);
+    text-align: center;
+  }
+  .tour-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--blue-light);
+    margin-bottom: 16px;
+  }
+  .tour h2 {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+  .tour-sub {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 70px;
+  }
+  .tour-coming-soon {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    padding: 60px 80px;
+    border: 1px solid rgba(74,127,212,0.15);
+    position: relative;
+    overflow: hidden;
+  }
+  .tour-coming-soon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(74,127,212,0.05), transparent 60%);
+    pointer-events: none;
+  }
+  .tour-icon {
+    width: 56px;
+    height: 56px;
+    border: 1px solid rgba(74,127,212,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-light);
+    opacity: 0.7;
+  }
+  .tour-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+  .tour-coming-soon-text {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+  .tour-coming-soon-text em {
+    color: var(--blue-light);
+    font-style: normal;
+  }
+  .tour-notify-text {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    max-width: 340px;
+    line-height: 1.8;
+  }
+  .tour-dots {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .tour-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--blue-accent);
+    opacity: 0.4;
+    animation: dotPulse 1.8s ease-in-out infinite;
+  }
+  .tour-dot:nth-child(2) { animation-delay: 0.3s; }
+  .tour-dot:nth-child(3) { animation-delay: 0.6s; }
+  @keyframes dotPulse {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.4); }
   }
 
   /* Fade-in on scroll */
@@ -560,6 +661,7 @@
     <li><a href="#music">Music</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#listen">Listen</a></li>
+    <li><a href="#tour">Tour</a></li>
     <li><a href="#connect">Connect</a></li>
   </ul>
 </nav>
@@ -662,6 +764,12 @@
   <p class="reveal">Stay connected for new releases, behind-the-scenes moments &amp; more</p>
   <div class="social-grid">
 
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/sailendrasinghmac/" target="_blank" class="social-card reveal">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      Instagram
+    </a>
+
     <!-- Facebook -->
     <a href="https://www.facebook.com/sailendrasinghmac/" target="_blank" class="social-card reveal">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -680,6 +788,27 @@
       SoundCloud
     </a>
 
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- TOUR DATES -->
+<section class="tour" id="tour">
+  <p class="tour-label reveal">Live Shows</p>
+  <h2 class="reveal">Tour <em style="font-family:'Cormorant Garamond',serif; font-style:italic; color:var(--blue-light);">Dates</em></h2>
+  <p class="tour-sub reveal">Experience the music live</p>
+  <div class="tour-coming-soon reveal">
+    <div class="tour-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+    </div>
+    <p class="tour-coming-soon-text">Coming <em>Soon</em></p>
+    <p class="tour-notify-text">Tour dates are being planned. Stay connected across social platforms to be the first to know when tickets go live.</p>
+    <div class="tour-dots">
+      <div class="tour-dot"></div>
+      <div class="tour-dot"></div>
+      <div class="tour-dot"></div>
+    </div>
   </div>
 </section>
 
